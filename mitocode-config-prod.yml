@@ -1,3 +1,4 @@
 mitocode:
   environment: Production
+  branch: develop
   password: '{cipher}1f39fced936f5fe29d78f077666f14e85330180d3525f9ed70e96f9e83f48d4c109ed9d08c8a79d2f97a439711dd50bd98e125de3096b398ac6bb6f303fae4ba'
