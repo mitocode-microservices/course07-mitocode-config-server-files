@@ -11,11 +11,11 @@ spring:
           predicates:
             - Path=/api/product-service/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=1
 
         - id: user-service-route
           uri: lb://user-service
           predicates:
             - Path=/api/user-service/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=1
