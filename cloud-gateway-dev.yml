@@ -20,7 +20,8 @@ spring:
             - Path=/api/user-service/**
           filters:
             - StripPrefix=2
-            - name: CustomFilter
-              args:
-                headerKey: MitocodeKey
-                headerValue: MitocodeValue
+            #- name: CustomFilter
+            #  args:
+            #    headerKey: MitocodeKey
+            #    headerValue: MitocodeValue
+            - UserServiceFilter=MitocodeKey,MitocodeValue
