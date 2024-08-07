@@ -2,7 +2,7 @@ server:
   port: 9010
 
 # Ribon Configuration
-service-id:
+product-service:
   ribbon:
     eureka:
       enabled: false
