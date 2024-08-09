@@ -22,5 +22,5 @@ resilience4j:
         slowCallDurationThreshold: 500ms
         slowCallRateThreshold: 50
     instances:
-      product-service-cb:
+      product-service-cb-2:
         base-config: cualquier-cosa
