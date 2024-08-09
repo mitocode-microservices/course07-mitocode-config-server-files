@@ -13,13 +13,13 @@ management:
 resilience4j:
   circuitbreaker:
     configs:
-      product-service:
-        slidingWindowSize: 15
-        failureRateThreshold: 20
-        waitDurationInOpenState: 20s
-        permittedNumberOfCallsInHalfOpenState: 8
-        slowCallDurationThreshold: 500ms
-        slowCallRateThreshold: 50
-    instances:
       product-service-cb:
-        base-config: product-service
+        slidingWindowSize: 12
+        failureRateThreshold: 40
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 8
+        slowCallRateThreshold: 20
+        slowCallDurationThreshold: 500ms
+    instances:
+      mitocode-product: 
+        base-config: product-service-cb 
