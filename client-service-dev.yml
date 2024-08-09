@@ -7,3 +7,17 @@ management:
       exposure:
         include: '*'
         base-path: /actuator
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      product-service-cb:
+        slidingWindowSize: 12
+        failureRateThreshold: 40
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 8
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 500ms
+    instances:
+      mitocode-product: 
+        base-config: product-service-cb
