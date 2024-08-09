@@ -19,5 +19,5 @@ resilience4j:
         slowCallRateThreshold: 50
         slowCallDurationThreshold: 500ms
     instances:
-      mitocode-product: 
+      circuit-breaker-product: 
         base-config: product-service-cb
