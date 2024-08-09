@@ -4,7 +4,7 @@ server:
 resilience4j:
   circuitbreaker:
     configs:
-      product-service-cb:
+      mitocode-product:
         slidingWindowSize: 12
         failureRateThreshold: 40
         waitDurationInOpenState: 10s
@@ -12,9 +12,6 @@ resilience4j:
         slowCallRateThreshold: 20
         slowCallDurationThreshold: 500ms
         minimumNumberOfCalls: 12
-    instances:
-      mitocode-product: 
-        base-config: product-service-cb
 
 management:
   endpoints:
