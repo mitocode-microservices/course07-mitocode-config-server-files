@@ -3,7 +3,7 @@ server:
 
 resilience4j:
   circuitbreaker:
-    configs:
+    instances:
       mitocode-product:
         slidingWindowSize: 12
         failureRateThreshold: 40
