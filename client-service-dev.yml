@@ -1,9 +1,26 @@
 server:
   port: ${CUSTOM.SERVER.PORT:9010}
 
+# Actuator Configuration
 management:
   endpoints:
     web:
       exposure:
         include: '*'
         base-path: /actuator
+
+# Circuit Breaker configuration
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      cualquier-cosa:
+        slidingWindowSize: 15
+        failureRateThreshold: 20
+        waitDurationInOpenState: 20s
+        permittedNumberOfCallsInHalfOpenState: 8
+        slowCallDurationThreshold: 500ms
+        slowCallRateThreshold: 50
+    instances:
+      product-service-cb:
+        base-config: cualquier-cosa
