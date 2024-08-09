@@ -11,6 +11,7 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 8
         slowCallRateThreshold: 20
         slowCallDurationThreshold: 500ms
+        minimumNumberOfCalls: 12
     instances:
       mitocode-product: 
         base-config: product-service-cb
