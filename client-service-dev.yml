@@ -13,10 +13,10 @@ resilience4j:
     configs:
       product-service-cb:
         slidingWindowSize: 12
-        failureRateThreshold: 40
+        failureRateThreshold: 48
         waitDurationInOpenState: 10s
         permittedNumberOfCallsInHalfOpenState: 8
-        slowCallRateThreshold: 50
+        slowCallRateThreshold: 58
         slowCallDurationThreshold: 500ms
     instances:
       mitocode-product: 
