@@ -1,15 +1,6 @@
 server:
   port: ${CUSTOM.SERVER.PORT:9010}
 
-# Actuator Configuration
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-        base-path: /actuator
-
-# Circuit Breaker configuration
 resilience4j:
   circuitbreaker:
     configs:
@@ -22,4 +13,11 @@ resilience4j:
         slowCallDurationThreshold: 500ms
     instances:
       mitocode-product: 
-        base-config: product-service-cb 
+        base-config: product-service-cb
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        base-path: /actuator
