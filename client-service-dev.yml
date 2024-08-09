@@ -10,11 +10,10 @@ management:
         base-path: /actuator
 
 # Circuit Breaker configuration
-
 resilience4j:
   circuitbreaker:
     configs:
-      cualquier-cosa:
+      product-service:
         slidingWindowSize: 15
         failureRateThreshold: 20
         waitDurationInOpenState: 20s
@@ -22,5 +21,5 @@ resilience4j:
         slowCallDurationThreshold: 500ms
         slowCallRateThreshold: 50
     instances:
-      product-service-cb-2:
-        base-config: cualquier-cosa
+      product-service-cb:
+        base-config: product-service
