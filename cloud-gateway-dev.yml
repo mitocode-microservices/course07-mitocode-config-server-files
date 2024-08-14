@@ -16,7 +16,7 @@ resilience4j:
       mitocode-product: 
         base-config: product-service-cb
 
-# Spring Cloud Gateway Router
+# Spring Cloud Gateway Routes
 spring:
   cloud:
     gateway:
@@ -32,6 +32,7 @@ spring:
             - name: CircuitBreaker
               args:
                 name: mitocode-product
+                statusCodes: 400,401,403,500,503
                 fallbackUri: forward:/api/user-service/api/mitocode/user
 
         - id: user-service-route
