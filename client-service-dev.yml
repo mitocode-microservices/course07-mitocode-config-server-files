@@ -1,13 +1,6 @@
 server:
   port: ${CUSTOM.SERVER.PORT:9010}
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-        base-path: /actuator
-
 resilience4j:
   circuitbreaker:
     configs:
