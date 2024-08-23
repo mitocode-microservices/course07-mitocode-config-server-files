@@ -35,3 +35,18 @@ resilience4j:
     instances:
       mitocode-product-tl:
         base-config: product-service-tl
+
+# Zipkin Configuration
+management:
+  tracing:
+    sampling:
+      probability: 0.5
+
+# Logging Configuration
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG # ALL, INFO, ERROR
+  pattern:
+    level: '%5p [${spring.application.name},%X{traceId:-},%X{spanId:-}]'
