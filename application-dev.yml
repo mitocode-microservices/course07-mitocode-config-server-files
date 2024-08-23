@@ -16,3 +16,18 @@ management:
       exposure:
         include: '*'
         base-path: /actuator
+
+# Zipkin Configuration
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+# Logging Configuration
+logging:
+  level:
+    org:
+      springframework:
+        web: ALL # ALL, INFO, ERROR
+  pattern:
+    level: '%5p [${spring.application.name},%X{traceId:-},%X{spanId:-}]'
