@@ -47,6 +47,6 @@ logging:
   level:
     org:
       springframework:
-        web: DEBUG # ALL, INFO, ERROR
+        web: ERROR # ALL, INFO, ERROR
   pattern:
     level: '%5p [${spring.application.name},%X{traceId:-},%X{spanId:-}]'
