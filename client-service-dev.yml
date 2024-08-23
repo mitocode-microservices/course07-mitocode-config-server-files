@@ -40,7 +40,7 @@ resilience4j:
 management:
   tracing:
     sampling:
-      probability: 0.5
+      probability: 1.0
 
 # Logging Configuration
 logging:
