@@ -27,4 +27,4 @@ springdoc:
     enabled: true
   swagger-ui:
     path: /openapi.yml
-    enabled: false
+    enabled: true
