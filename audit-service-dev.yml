@@ -1,0 +1,9 @@
+server:
+  port: ${CUSTOM.SERVER.PORT:9990}
+
+
+# Mongo Configuration
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mitocode:mitocode@localhost:27017/mitocode?authSource=admin
