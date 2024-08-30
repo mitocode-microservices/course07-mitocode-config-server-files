@@ -25,6 +25,13 @@ springdoc:
   api-docs:
     path: /api-docs
     enabled: true
+    # http://127.0.0.1:9020/api-docs
   swagger-ui:
     path: /openapi.yml
     enabled: false
+        # http://127.0.0.1:9020/swagger-ui/index.html. Se debe deshabilitar swagger-ui para poder descargar openapi.yml
+
+kafka:
+  mitocode:
+    server: 127.0.0.1
+    port: 9092
