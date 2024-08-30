@@ -35,3 +35,4 @@ kafka:
   mitocode:
     server: 127.0.0.1
     port: 9092
+    topicName: mitocode
