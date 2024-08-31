@@ -31,6 +31,7 @@ springdoc:
     enabled: false
         # http://127.0.0.1:9020/swagger-ui/index.html. Se debe deshabilitar swagger-ui para poder descargar openapi.yml
 
+# Kafka Parameters
 kafka:
   mitocode:
     server: 127.0.0.1
