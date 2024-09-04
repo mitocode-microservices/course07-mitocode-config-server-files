@@ -50,19 +50,21 @@ spring:
 
   # Strangler Configuration
 
-         # Service AS-IS Configuration
+         # Service AS-IS Configuration -9023
         - id: product-query-service-route
           uri: lb://product-query-service
           predicates:
             - Path=/api/product-query-service/**
+            - Weight=product, 90
           filters:
             - StripPrefix=2
 
-         # Service TOB-BE Configuration
+         # Service TOB-BE Configuration - 9222
         - id: product-query-service-tobe-route
           uri: lb://product-query-service-tobe
           predicates:
             - Path=/api/product-query-service/**
+            - Weight=product, 10
           filters:
             - StripPrefix=2
 
