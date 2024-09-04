@@ -47,9 +47,8 @@ spring:
             #    headerValue: MitocodeValue
             - UserServiceFilter=MitocodeKey,MitocodeValue
 
-
-  # Strangler Configuration
-
+         # Strangler Configuration
+         
          # Service AS-IS Configuration - 9023
         - id: product-query-service-route
           uri: lb://product-query-service
