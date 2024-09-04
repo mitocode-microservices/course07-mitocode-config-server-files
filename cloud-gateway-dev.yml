@@ -47,6 +47,25 @@ spring:
             #    headerValue: MitocodeValue
             - UserServiceFilter=MitocodeKey,MitocodeValue
 
+
+  # Strangler Configuration
+
+         # Service AS-IS Configuration
+        - id: product-query-service-route
+          uri: lb://product-query-service
+          predicates:
+            - Path=/api/product-query-service/**
+          filters:
+            - StripPrefix=2
+
+         # Service TOB-BE Configuration
+        - id: product-query-service-tobe-route
+          uri: lb://product-query-service-tobe
+          predicates:
+            - Path=/api/product-query-service/**
+          filters:
+            - StripPrefix=2
+
 mitocode:
   security:
     key: cb5a5e83a031e8bdbee887001e4dcd202d5bff8402921506c489ed633be3460e
