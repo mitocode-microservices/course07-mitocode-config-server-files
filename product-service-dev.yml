@@ -5,7 +5,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://mitocode:mitocode@localhost:27017/mitocode?authSource=admin
+      uri: ${MONGODB.URL.CONNECTION:mongodb://mitocode:mitocode@localhost:27017/mitocode?authSource=admin}
 # Postgres Configuration
   jpa:
     databasePlatform:
@@ -17,7 +17,7 @@ spring:
           format_sql: true
           dialect: org.hibernate.dialect.PostgreSQLDialect
   datasource: 
-    url: jdbc:postgresql://localhost:5432/mitocode
+    url: ${POSTGRESQL.URL.CONNECTION:jdbc:postgresql://localhost:5432/mitocode}
     username: mitocode
     password: '{cipher}bd8b6928566a8e66e5255e081bf9a35218fd7e2a42ec0fcb19ff2f2ff87817cd'
 
@@ -34,6 +34,6 @@ springdoc:
 # Kafka Parameters
 kafka:
   mitocode:
-    server: 127.0.0.1
+    server: ${KAFKA.SERVER.HOSTNAME:127.0.0.1}
     port: 9092
     topicName: mitocode
