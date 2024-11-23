@@ -5,4 +5,4 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://mitocode:mitocode@localhost:27017/mitocode?authSource=admin
+      uri: '{cipher}75424cd0ee09dac58b6f20f7932c5f1c6a55d81379159616781f726a1acb64e4bba3eab750b38e2d3dc95bba946c25e9fe9300cd7c573892440e7d67dfb2a4b24d3d47e2bf5290ea18640b55beb62a2edadd17d31e514f9a42f7380fd684cb6c617f97518f212839d97be15e86aad3de'
